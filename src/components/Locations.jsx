@@ -9,7 +9,7 @@ import image1 from '../resources/image1.jpg'
 
 const Locations = () => {
   return (
-    <div className='max-w-[1240px] mx-auto py-16 px-4 text-center'>
+    <div className='max-w-[1240px] mx-auto py-10 px-4 text-center'>
         <h1>All Locations Available</h1>
         <p>The Best Locations for Travel</p>
 

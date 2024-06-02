@@ -5,7 +5,7 @@ import phot2 from '../photos/phot2.jpg'
 import photo3 from '../photos/photo3.jpg'
 import photos from '../photos/photos.jpg'
 import photoss from '../photos/photoss.jpg'
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -20,7 +20,7 @@ import { Pagination,Autoplay } from 'swiper/modules';
 
 const Destinations = () => {
   return (
-    <div className='max-w-[1240px] mx-auto py-16 px-4 text-center '>
+    <div className='max-w-[1240px] mx-auto py-1 px-4 text-center '>
         <h1>Best Way to Enjoy Trip</h1>
         <p>Pay More Travel Safe</p>
     <Swiper
@@ -30,12 +30,14 @@ const Destinations = () => {
       pagination={{
         clickable: true,
       }}
+
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
       modules={[Pagination,Autoplay]}
       className="mySwiper my-4"
+      speed={1200}
     >
       <SwiperSlide>
         <img src={photo1} alt="" className='w-[1200px] mx-auto h-[500px] object-cover'/>

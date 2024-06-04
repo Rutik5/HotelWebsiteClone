@@ -6,6 +6,8 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import video from '../resources/video.mp4';
 import BookingForm from './BookingForm';
 import { Link } from 'react-router-dom';
+import DestinationPage from './DestinationPage';
+import TravelPage from './TravelPage';
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -21,8 +23,8 @@ const Header = () => {
       </div>
       <ul className='hidden md:flex justify-center items-center gap-4'>
         <li className='cursor-pointer'>Home</li>
-        <li className='cursor-pointer'>Destinations</li>
-        <li className='cursor-pointer'>Travel</li>
+        <Link to='/destinations' element={<DestinationPage />}>Destinations </Link>
+        <Link to='/travel' element={<TravelPage />}>Travel</Link>
         <li className='cursor-pointer'>Contact</li>
         <Link to='/booking' className='cursor-pointer' element={<BookingForm />}>Book</Link>
       </ul>

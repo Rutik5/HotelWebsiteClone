@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contacts from './components/Contacts';
 import Destinations from './components/Destinations';
@@ -11,6 +11,8 @@ import AboutPage from './components/AboutPage';
 import BlogPage from './components/BlogPage';
 import CareersPage from './components/CareersPage';
 import BrandCenterPage from './components/BrandCenterPage';
+import DestinationPage from './components/DestinationPage';
+import TravelPage from './components/TravelPage';
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/blog" element={<BlogPage />} />
           <Route path='/careers' element={<CareersPage /> } />
           <Route path='/brandcenter' element={<BrandCenterPage />} />
+          <Route path='/destinations' element={<DestinationPage />} />
+          <Route path='/travel' element={<TravelPage />} />
         </Routes>
       </div>
     </Router>

@@ -4,6 +4,8 @@ import { IoSearch } from 'react-icons/io5';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import video from '../resources/video.mp4';
+import BookingForm from './BookingForm';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -22,7 +24,7 @@ const Header = () => {
         <li className='cursor-pointer'>Destinations</li>
         <li className='cursor-pointer'>Travel</li>
         <li className='cursor-pointer'>Contact</li>
-        <li className='cursor-pointer'>Book</li>
+        <Link to='/booking' className='cursor-pointer' element={<BookingForm />}>Book</Link>
       </ul>
 
       <div className='hidden md:flex'>
@@ -41,7 +43,7 @@ const Header = () => {
           <li className='text-x p-4 border-b border-gray-500/30 cursor-pointer'>Destinations</li>
           <li className='text-x p-4 border-b border-gray-500/30 cursor-pointer'>Travel</li>
           <li className='text-x p-4 border-b border-gray-500/30 cursor-pointer'>Contact</li>
-          <li className='text-x p-4 border-b border-gray-500/30 cursor-pointer'>Book</li>
+          <Link to='/booking' className='text-x p-4 border-b border-gray-500/30 cursor-pointer' element={<BookingForm />}>Book</Link>
         </ul>
 
         <div className='flex flex-col mt-6 w-full px-4'>
